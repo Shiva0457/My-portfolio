@@ -1,0 +1,374 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Background Gradient */
+body {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #fff;
+  transition: background 0.5s ease;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  z-index: 100;
+}
+
+nav .logo {
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff6a00;
+}
+
+#theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Sections */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00c9ff, #92fe9d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hero Section */
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero h2 span {
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #00f260, #0575e6);
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0 0 15px #00f260, 0 0 25px #0575e6;
+  transform: scale(1.05);
+}
+
+/* Project Cards */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+  width: 280px;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px #ff6a00, 0 0 25px #ee0979;
+}
+
+/* Tech Box */
+.tech-box {
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.tech-box p {
+  margin-bottom: 8px;
+  color: #92fe9d;
+  font-weight: 500;
+}
+
+.tech-box a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 6px 12px;
+  background: linear-gradient(45deg, #00c9ff, #92fe9d);
+  color: #000;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.tech-box a i {
+  margin-right: 6px;
+}
+
+.tech-box a:hover {
+  background: linear-gradient(45deg, #ff6a00, #ee0979);
+  color: #fff;
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  font-size: 14px;
+}
+
+/* Dark Theme */
+body.dark {
+  background: linear-gradient(135deg, #232526, #414345);
+}
+
+body.dark nav ul li a:hover {
+  color: #00c9ff;
+}
+
+
+/* Contact Section */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* Contact Info */
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.info-box i {
+  font-size: 20px;
+  color: #00c9ff;
+}
+
+.info-box a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.info-box a:hover {
+  color: #00c9ff;
+}
+
+
+/* Skills & Certificates */
+#skills-certificates {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 20px;
+  text-align: left;
+}
+
+.skills, .certificates {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Skill bars */
+.skill-bar {
+  margin-bottom: 20px;
+}
+
+.skill-bar p {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.bar {
+  width: 100%;
+  background: rgba(255,255,255,0.2);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  padding: 5px;
+  color: white;
+  text-align: right;
+  border-radius: 20px;
+  font-size: 13px;
+  width: 0;
+  transition: width 2s ease;
+}
+
+/* Certificates */
+.certificates ul {
+  list-style: none;
+  padding: 0;
+}
+
+.certificates li {
+  margin-bottom: 12px;
+}
+
+.certificates a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.certificates a:hover {
+  color: #ff6a00;
+}
+
+/* Contact */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-info .info-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  color: #ff416c;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: #928dab;;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+}
+
+::placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+
+/* Send Button */
+.send-btn {
+  background: linear-gradient(45deg, #00f260, #0575e6);
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: auto;
+  display: inline-block;
+  font-size: 15px;
+}
+.send-btn:hover {
+  box-shadow: 0 0 15px #00f260, 0 0 25px #0575e6;
+  transform: scale(1.05);
+}
